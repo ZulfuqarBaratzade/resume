@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import environ 
 
+env = environ.Env(DEBUG=(bool, False))
+
+environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -19,15 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$fxw0h4h4g89v*@bn@c$)#4yg8wqnz4zrtw7xp$u=yobt!r+go'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG=env('DEBUG')
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = env('SECRET_KEY')
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = env('ALLOWED_HOSTS',cast=list)
 
 
+#CSRF_TRUSTED_ORIGINS
+CSRF_TRUSTED_ORIGINS = env('CSRF_TRUSTED_ORIGINS',cast=list)
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +61,7 @@ ROOT_URLCONF = 'resume.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR,'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
