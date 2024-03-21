@@ -1,414 +1,311 @@
+
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Porto - Tailwind Template</title>
-        <link rel="stylesheet" href="{%static 'assets/css/tailwind.css' %}">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="{% get_media_prefix %}image/img/favicon.png" type="image/png">
+        <title>MeetMe Personal</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/popup/magnific-popup.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/flaticon/flaticon.css' %}">
+        <!-- main css -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     </head>
-
-    <body class="bg-gray-100">
+    <body>
         
-        <section class="py-10 md:py-16">
-
-            <div class="container max-w-screen-xl mx-auto px-4">
-
-                <nav class="flex items-center justify-between mb-40">
-                    <img src="{% get_media_prefix %}image/navbar-logo.png" alt="Logo">
-
-                    <button class="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">Get my CV</button>
-                </nav>
-
-                <div class="text-center">
-                    <div class="flex justify-center mb-16">
-                        <img src="{% get_media_prefix %}image/home-img.png" alt="Image">
-                    </div>
-
-                    <h6 class="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">Kate Wolff</h6>
-
-                    <h1 class="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8">Senior Backend Developer</h1>
-
-                    <p class="font-normal text-gray-600 text-md md:text-xl mb-16">I have a passion for software. I enjoy creating tools that make life easier for people.</p>
-
-                    <a href="#" class="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500">Hire me</a>
-                </div>
-
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="index.html"><img src="{% get_media_prefix %}image/img/logo.png" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+								<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
+								<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							</ul>
+						</div> 
+					</div>
+            	</nav>
             </div>
-
-        </section>
-
-        <section class="py-10 md:py-16">
-
-            <div class="container max-w-screen-xl mx-auto px-4">
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <div class="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
-                            <i data-feather="activity"></i>
-                        </div>
-
-                        <h4 class="font-medium text-gray-700 text-lg mb-4">High experience</h4>
-
-                        <p class="font-normal text-gray-500 text-md">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                    
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <div class="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
-                            <i data-feather="codesandbox"></i>
-                        </div>
-
-                        <h4 class="font-medium text-gray-700 text-lg mb-4">Useful sandboxes</h4>
-
-                        <p class="font-normal text-gray-500 text-md">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                    
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <div class="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
-                            <i data-feather="coffee"></i>
-                        </div>
-
-                        <h4 class="font-medium text-gray-700 text-lg mb-4">Success side projects</h4>
-
-                        <p class="font-normal text-gray-500 text-md">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        <!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+           	<div class="container box_1620">
+           		<div class="banner_inner d-flex align-items-center">
+					<div class="banner_content">
+						<div class="media">
+							<div class="d-flex">
+								<img src="{% get_media_prefix %}image/img/personal.jpg" alt="">
+							</div>
+							<div class="media-body">
+								<div class="personal_text">
+									<h6>Hello Everybody, i am</h6>
+									<h3>Donald McKinney</h3>
+									<h4>Junior UI/UX Developer</h4>
+									<p>You will begin to realise why this exercise is called the Dickens Pattern (with reference to the ghost showing Scrooge some different futures)</p>
+									<ul class="list basic_info">
+										<li><a href="#"><i class="lnr lnr-calendar-full"></i> 31st December, 1992</a></li>
+										<li><a href="#"><i class="lnr lnr-phone-handset"></i> 44 (012) 6954 783</a></li>
+										<li><a href="#"><i class="lnr lnr-envelope"></i> businessplan@donald</a></li>
+										<li><a href="#"><i class="lnr lnr-home"></i> Santa monica bullevard</a></li>
+									</ul>
+									<ul class="list personal_social">
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
             </div>
-
         </section>
-
-        <section class="py-10 md:py-16">
-
-            <div class="container max-w-screen-xl mx-auto px-4">
-
-                <div class="flex flex-col lg:flex-row justify-between">
-                    <div class="mb-10 lg:mb-0">
-                        <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Portfolio</h1>
-
-                        <p class="font-normal text-gray-500 text-xs md:text-base">I have brought here my biggest and favorite works <br> as a professional.</p>
-                    </div>
-
-                    <div class="space-y-24">
-                        <div class="flex space-x-6">
-                            <h1 class="font-normal text-gray-700 text-3xl md:text-4xl">01</h1>
-
-                            <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
-
-                            <div>
-                                <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API Generator</h1>
-
-                                <p class="font-normal text-gray-500 text-sm md:text-base">A dummy data free and documented API generator to facilitate <br> the process of testing the front-end portion of projects.</p>
+        <!--================End Home Banner Area =================-->
+        
+        <!--================Welcome Area =================-->
+        <section class="welcome_area p_120">
+        	<div class="container">
+        		<div class="row welcome_inner">
+        			<div class="col-lg-6">
+        				<div class="welcome_text">
+        					<h4>About Myself</h4>
+        					<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed.</p>
+        					<div class="row">
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Welcome Area =================-->
+        
+        <!--================My Tabs Area =================-->
+        <section class="mytabs_area p_120">
+        	<div class="container">
+        		<div class="tabs_inner">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Experiences</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My Education</a>
+						</li>
+					</ul>
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<ul class="list">
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p>March 2017 to present</p>
+										</div>
+										<div class="media-body">
+											<h4>Colorlib</h4>
+											<p>Senior Web Developer <br />Santa monica, Los angeles</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p>March 2017 to present</p>
+										</div>
+										<div class="media-body">
+											<h4>Colorlib</h4>
+											<p>Senior Web Developer <br />Santa monica, Los angeles</p>
+										</div>
+									</div>
+								</li>
+								<li>
+								<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p>March 2017 to present</p>
+										</div>
+										<div class="media-body">
+											<h4>Colorlib</h4>
+											<p>Senior Web Developer <br />Santa monica, Los angeles</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+							<ul class="list">
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p>March 2017 to present</p>
+										</div>
+										<div class="media-body">
+											<h4>Colorlib</h4>
+											<p>Senior Web Developer <br />Santa monica, Los angeles</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p>March 2017 to present</p>
+										</div>
+										<div class="media-body">
+											<h4>Colorlib</h4>
+											<p>Senior Web Developer <br />Santa monica, Los angeles</p>
+										</div>
+									</div>
+								</li>
+								<li>
+								<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p>March 2017 to present</p>
+										</div>
+										<div class="media-body">
+											<h4>Colorlib</h4>
+											<p>Senior Web Developer <br />Santa monica, Los angeles</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End My Tabs Area =================-->
+        
+        <!--================Feature Area =================-->
+        <section class="feature_area p_120">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>offerings to my clients</h2>
+        			<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>
+        		</div>
+        		<div class="feature_inner row">
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					<i class="flaticon-city"></i>
+        					<h4>Architecture</h4>
+        					<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $17 each.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					<i class="flaticon-skyline"></i>
+        					<h4>Interior Design</h4>
+        					<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $17 each.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					<i class="flaticon-sketch"></i>
+        					<h4>Concept Design</h4>
+        					<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $17 each.</p>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Feature Area =================-->       
+        <!--================Footer Area =================-->
+        <footer class="footer_area p_120">
+        	<div class="container">
+        		<div class="row footer_inner">
+        			<div class="col-lg-5 col-sm-6">
+        				<aside class="f_widget ab_widget">
+        					<div class="f_title">
+        						<h3>About Me</h3>
+        					</div>
+        					<p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills,</p>
+        					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        				</aside>
+        			</div>
+        			<div class="col-lg-5 col-sm-6">
+        				<aside class="f_widget news_widget">
+        					<div class="f_title">
+        						<h3>Newsletter</h3>
+        					</div>
+        					<p>Stay updated with our latest trends</p>
+        					<div id="mc_embed_signup">
+                                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
+                                	<div class="input-group d-flex flex-row">
+                                        <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                        <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>		
+                                    </div>				
+                                    <div class="mt-10 info"></div>
+                                </form>
                             </div>
-                        </div>
-                        
-                        <div class="flex space-x-6">
-                            <h1 class="font-normal text-gray-700 text-3xl md:text-4xl">02</h1>
-
-                            <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
-
-                            <div>
-                                <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API Generator</h1>
-
-                                <p class="font-normal text-gray-500 text-sm md:text-base">A dummy data free and documented API generator to facilitate <br> the process of testing the front-end portion of projects.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex space-x-6">
-                            <h1 class="font-normal text-gray-700 text-3xl md:text-4xl">03</h1>
-
-                            <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
-
-                            <div>
-                                <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API Generator</h1>
-
-                                <p class="font-normal text-gray-500 text-sm md:text-base">A dummy data free and documented API generator to facilitate <br> the process of testing the front-end portion of projects.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="py-10 md:py-16">
-
-            <div class="container max-w-screen-xl mx-auto px-4">
-
-                <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Education</h1>
-
-                <p class="font-normal text-gray-500 text-xs md:text-base mb-20">Below is a summary of the places I studied</p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <div class="relative">
-                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
-                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <div class="relative">
-                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
-                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <div class="relative">
-                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
-                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <div class="relative">
-                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
-                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <div class="relative">
-                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
-                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <div class="relative">
-                            <h6 class="font-semibold text-gray-500 text-md relative z-10">See the place here</h6>
-                            <span class="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="py-10 md:py-16">
-
-            <div class="container max-w-screen-xl mx-auto px-4">
-
-                <div class="text-center">
-                    <h1 class="font-normal text-gray-300 text-3xl md:text-6xl lg:text-7xl mb-20 md:mb-32 lg:mb-48">Please do not measure your skills in <br> percentages!</h1>
-
-                    <p class="font-medium text-gray-700 text-xs md:text-base">In my many years of experience, I use @laravel for backend projects and @vuejs for <br> front-end projects. I’m an avid programmer, so I create designs based on the <br> weekend @figmadesign.</p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="py-10 md:py-16">
-
-            <div class="container max-w-screen-xl mx-auto px-4">
-
-                <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Experience</h1>
-
-                <p class="font-normal text-gray-500 text-xs md:text-base mb-20">Below is a summary of the places I studied</p>
-
-                <div class="flex flex-col lg:flex-row justify-between">
-                    <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
-                        <h6 class="font-medium text-gray-400 text-base uppercase">Company</h6>
-
-                        <p class="font-semibold text-gray-600 text-base">Massa Fames <span class="font-normal text-gray-300">/ New York</span></p>
-
-                        <p class="font-semibold text-gray-600 text-base">Massa Fames <span class="font-normal text-gray-300">/ New York</span></p>
-
-                        <p class="font-semibold text-gray-600 text-base">Massa Fames <span class="font-normal text-gray-300">/ New York</span></p>
-
-                        <p class="font-semibold text-gray-600 text-base">Massa Fames <span class="font-normal text-gray-300">/ New York</span></p>
-
-                        <p class="font-semibold text-gray-600 text-base">Massa Fames <span class="font-normal text-gray-300">/ New York</span></p>
-                    </div>
-
-                    <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
-                        <h6 class="font-medium text-gray-400 text-base uppercase">Position</h6>
-
-                        <p class="font-normal text-gray-400 text-base">Junior Front-End Developer</p>
-
-                        <p class="font-normal text-gray-400 text-base">Junior Front-End Developer</p>
-
-                        <p class="font-normal text-gray-400 text-base">Junior Front-End Developer</p>
-
-                        <p class="font-normal text-gray-400 text-base">Junior Front-End Developer</p>
-
-                        <p class="font-normal text-gray-400 text-base">Junior Front-End Developer</p>
-                    </div>
-
-                    <div class="space-y-8 md:space-y-16">
-                        <h6 class="font-medium text-gray-400 text-base uppercase">Year</h6>
-
-                        <p class="font-normal text-gray-400 text-base">2016</p>
-
-                        <p class="font-normal text-gray-400 text-base">2016</p>
-
-                        <p class="font-normal text-gray-400 text-base">2016</p>
-
-                        <p class="font-normal text-gray-400 text-base">2016</p>
-
-                        <p class="font-normal text-gray-400 text-base">2016</p>
-                    </div>
-                </div>
-                
-            </div>
-
-        </section>
-
-        <section class="py-10 md:py-16">
-
-            <div class="container max-w-screen-xl mx-auto px-4">
-
-                <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Brands</h1>
-
-                <p class="font-normal text-gray-500 text-xs md:text-base mb-10 md:mb-20">Below is a summary of the places I studied</p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    <img src="{%get_media_prefix %}image/brand-1.png" alt="Image">
-                    <img src="{%get_media_prefix %}image/brand-2.png" alt="Image">
-                    <img src="{%get_media_prefix %}image/brand-3.png" alt="Image">
-                    <img src="{%get_media_prefix %}image/brand-4.png" alt="Image">
-                    <img src="{%get_media_prefix %}image/brand-5.png" alt="Image">
-                    <img src="{%get_media_prefix %}image/brand-6.png" alt="Image">
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="py-10 md:py-16">
-
-            <div class="container max-w-screen-xl mx-auto px-4">
-
-                <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Testimonial</h1>
-
-                <p class="font-normal text-gray-500 text-xs md:text-base mb-10 md:mb-20">Below is a summary of the places I studied</p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-                    </div>
-
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-                    </div>
-
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-                    </div>
-
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-                    </div>
-
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-                    </div>
-
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-
-                        <p class="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-
-                        <h6 class="font-semibold text-gray-500 text-md">Stephan Clark <span class="font-medium text-gray-300 text-sm">- CEO at EarlyBird</span></h6>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <footer class="py-10 md:py-16 mb-20 md:mb-40 lg::mb-52">
-
-            <div class="container max-w-screen-xl mx-auto px-4">
-
-                <div class="text-center">
-                    <h1 class="font-medium text-gray-700 text-4xl md:text-5xl mb-5">Testimonial</h1>
-
-                    <p class="font-normal text-gray-400 text-md md:text-lg mb-20">I’m not currently taking on new client work but feel free to contact me for any <br> other inquiries.</p>
-
-                    <div class="flex items-center justify-center space-x-8">
-                        <a href="#" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
-                            <i data-feather="twitter" class="text-gray-500 hover:text-gray-800 transition ease-in-out duration-500"></i>
-                        </a>
-    
-                        <a href="#" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
-                            <i data-feather="dribbble" class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
-                        </a>
-    
-                        <a href="#" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
-                            <i data-feather="facebook" class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
-                        </a>
-    
-                        <a href="#" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
-                            <i data-feather="codepen" class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
-                        </a>
-    
-                        <a href="#" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
-                            <i data-feather="at-sign" class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
-                        </a>
-    
-                        <a href="#" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
-                            <i data-feather="instagram" class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
+        				</aside>
+        			</div>
+        			<div class="col-lg-2">
+        				<aside class="f_widget social_widget">
+        					<div class="f_title">
+        						<h3>Follow Me</h3>
+        					</div>
+        					<p>Let us be social</p>
+        					<ul class="list">
+        						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+        						<li><a href="#"><i class="fa fa-behance"></i></a></li>
+        					</ul>
+        				</aside>
+        			</div>
+        		</div>
+        	</div>
         </footer>
-
-
-        <script>
-            feather.replace()
-        </script>
-
+        <!--================End Footer Area =================-->
+        
+        
+        
+        
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/stellar.js"></script>
+        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="js/theme.js"></script>
     </body>
 </html>
