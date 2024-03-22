@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import GeneralSetting,ImageSetting
+from .models import GeneralSetting,ImageSetting,TextSetting
 # Register your models here.
 
 @admin.register(GeneralSetting)
@@ -19,3 +19,12 @@ class ImageSettingAdmin(admin.ModelAdmin):
 
     class Meta:
         model=ImageSetting
+
+@admin.register(TextSetting)
+class TextSettingAdmin(admin.ModelAdmin):
+    list_display=['id','name','text',"updated_date","created_date"]
+    search_fields=['name','text']
+    list_editable=['text']
+
+    class Meta:
+        model=TextSetting

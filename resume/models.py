@@ -72,3 +72,20 @@ class ImageSetting(AbstractModel):
         verbose_name="Image Setting"
         verbose_name_plural="Image Settings"
         ordering=("image",)
+
+
+class TextSetting(AbstractModel):
+    name=models.CharField(default='',max_length=254,blank=True,verbose_name='name')
+    text=models.TextField(
+        default='',
+        max_length=1000,
+        blank=True,
+        verbose_name='text'
+    )
+    def __str__(self):
+        return f"Text {self.name}"
+
+    class Meta:
+        verbose_name="Text Setting"
+        verbose_name_plural="Text Settings"
+        ordering=("text",)
