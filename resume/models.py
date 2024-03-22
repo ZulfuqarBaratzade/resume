@@ -1,7 +1,22 @@
 from django.db import models
 
+
 # Create your models here.
-class GeneralSetting(models.Model):
+class AbstractModel(models.Model):
+    updated_date=models.DateTimeField(
+        blank=True,
+        auto_now=True,
+        verbose_name="updated_data"
+    )
+    created_date=models.DateField(
+        blank=True,
+        auto_now_add=True,
+        verbose_name="created_data"
+    )
+    class Meta:
+        abstract=True
+
+class GeneralSetting(AbstractModel):
     name=models.CharField(
         default="",
         max_length=254,
@@ -21,16 +36,7 @@ class GeneralSetting(models.Model):
         verbose_name="parameter"
 
     )
-    updated_date=models.DateTimeField(
-        blank=True,
-        auto_now=True,
-        verbose_name="updated_data"
-    )
-    created_date=models.DateField(
-        blank=True,
-        auto_now_add=True,
-        verbose_name="created_data"
-    )
+    
     def __str__(self):
         return f"General settings {self.name}"
     class Meta:
@@ -40,7 +46,7 @@ class GeneralSetting(models.Model):
 
 
 
-class ImageSetting(models.Model):
+class ImageSetting(AbstractModel):
     name=models.CharField(
         default="",
         max_length=254,
@@ -60,16 +66,6 @@ class ImageSetting(models.Model):
         blank=True,
         upload_to='image/',
     )
-    updated_date=models.DateTimeField(
-        blank=True,
-        auto_now=True,
-        verbose_name="updated_data"
-    )
-    created_date=models.DateField(
-        blank=True,
-        auto_now_add=True,
-        verbose_name="created_data"
-        )
     def __str__(self):
         return f"Image setting {self.name}"
     class Meta:
