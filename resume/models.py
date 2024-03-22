@@ -68,10 +68,11 @@ class ImageSetting(models.Model):
     created_date=models.DateField(
         blank=True,
         auto_now_add=True,
-        verbose_name="created_data")
+        verbose_name="created_data"
+        )
     def __str__(self):
         return f"Image setting {self.name}"
     class Meta:
         verbose_name="Image Setting"
         verbose_name_plural="Image Settings"
-        ordering="image"
+        ordering=("image",)
