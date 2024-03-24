@@ -1,36 +1,69 @@
-body{
+body {
   box-sizing: border-box;
+  background-color: whitesmoke;
 }
-.container{
+
+.container {
   display: flex;
-  margin-top: 200px; 
-  width: 100% ; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  max-width: 1000px; /* Örnek bir maksimum genişlik */
   position: relative;
 }
-.info{
-  padding: 20px;
-}
-.profile{
-  position: absolute;
-}
-.info{
-  position: absolute;
-  left: 30%;
-  
-}
-.profile img{
+
+.profile img {
   width: 300px;
   border-radius: 200px;
   padding: 10px;
+}
 
+.info {
+  padding: 20px;
+  text-align: center; /* İçeriği ortalamak için */
 }
-.contact{
-  position: absolute;
-  left:30%;
-  top:70%;
-  display:flex;
+
+.contact {
+  margin-top: 30px; /* İletişim formunu hizalamak için */
+  display: flex;
+  flex-direction: column; /* İletişim formunu dikey olarak düzenlemek için */
+  align-items: center; /* İletişim formunu yatayda ortalamak için */
 }
-#message{
+
+#message {
   width: 500px;
-  padding:60px;
+  padding: 10px; /* Örnek bir değer */
+}
+
+.links {
+  margin-top: 30px; /* Bağlantıları hizalamak için */
+}
+
+.links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.links li {
+  padding: 0 20px; /* Bağlantılar arası boşluk */
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+}
+
+.get-cv {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.get-cv .btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff; /* Örnek bir renk */
+  color: #fff;
+  text-decoration: none;
 }
