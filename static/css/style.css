@@ -62,8 +62,26 @@ body {
 
 .get-cv .btn {
   padding: 10px 20px;
-  border-radius: 5px;
-  background-color: #007bff; /* Örnek bir renk */
-  color: #fff;
+  background-color: whitesmoke; /* Örnek bir renk */
+  color: grey;
   text-decoration: none;
+  border:none;
+  transition: all 0.1ms;
+}
+
+.get-cv .btn:hover {
+  border-radius: 5px;
+  border:1px solid;
+
+
+}
+/* Define styles for dark mode */
+.dark-mode {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+/* Additional styling for dark mode */
+.dark-mode label {
+  color: #fff; /* Adjust label color for better visibility */
 }
