@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from resume.models import GeneralSetting,ImageSetting,TextSetting,Contact
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -16,3 +17,11 @@ def index(request):
     }
     return render(request,"index.html",context)
 
+def contact_message(request):
+    if request.method=="POST":
+        contact=Contact()
+        email=request.POST.get("name")
+        text=request.POST.get("text")
+        contact.email=email
+        contact.text=text
+        
