@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from resume.models import GeneralSetting,ImageSetting,TextSetting
+from resume.models import GeneralSetting,ImageSetting,TextSetting,Contact
 
 # Create your views here.
 def index(request):
@@ -15,3 +15,4 @@ def index(request):
         'text':text,
     }
     return render(request,"index.html",context)
+

@@ -89,3 +89,18 @@ class TextSetting(AbstractModel):
         verbose_name="Text Setting"
         verbose_name_plural="Text Settings"
         ordering=("text",)
+
+class Contact(AbstractModel):
+    email=models.EmailField()
+    text=models.TextField(
+        default="",
+        max_length=1000,
+        blank=True,
+        verbose_name='text'
+    )
+    def __str__(self):
+        return f"Text {self.text}"
+    class Meta:
+        verbose_name="Contact"
+        verbose_name_plural="Contact Message"
+        ordering=("text",)
